@@ -1,0 +1,22 @@
+<apex:page controller="mymap">
+    <apex:form >
+    	<apex:pageblock title="Picklist" id="c">
+        	<apex:pageBlockSection >
+            	<apex:pageBlockSectionitem >
+                    <apex:outputLabel />
+                    <apex:selectList size="1" value="{!pick}">
+                        <apex:selectOptions value="{!C_list}"/>
+                        <apex:actionSupport event="onchange" action="{!callme}" reRender="c" />
+                    </apex:selectList>
+                </apex:pageBlockSectionitem>
+                
+                <apex:pageBlockSectionitem >
+                    <apex:outputLabel value="Places"/>
+                    <apex:selectList size="1">
+                        <apex:selectOptions value="{!P_list}"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionitem>
+            </apex:pageBlockSection>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

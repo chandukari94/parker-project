@@ -1,0 +1,92 @@
+<apex:page standardController="Account" recordSetVar="items">
+    <style>
+    	.head{
+        	background:#D7DBDD;
+        }
+        .even{
+        	background:#F2F3F4;
+        }
+        .odd{
+        	background:#FDFEFE;
+        }
+    </style>
+   <apex:dataTable value="{!items}" var="a">
+       <apex:column value="{!a.name}" />
+       <apex:column value="{!a.phone}" />
+       <apex:column value="{!a.industry}" />
+       <apex:column value="{!a.rating}" />
+       <apex:column value="{!a.ownership}" />
+   </apex:dataTable>
+    <br/><br/>
+    <apex:dataTable value="{!items}" var="a" width="800">
+       <apex:column value="{!a.name}" />
+       <apex:column value="{!a.phone}" />
+       <apex:column value="{!a.industry}" />
+       <apex:column value="{!a.rating}" />
+       <apex:column value="{!a.ownership}" />
+   </apex:dataTable>
+    <br/><br/>
+    <apex:dataTable value="{!items}" var="a" width="800" frame="border">
+       <apex:column value="{!a.name}" />
+       <apex:column value="{!a.phone}" />
+       <apex:column value="{!a.industry}" />
+       <apex:column value="{!a.rating}" />
+       <apex:column value="{!a.ownership}" />
+   </apex:dataTable>
+     <br/><br/>
+    <apex:dataTable value="{!items}" var="a" width="800" frame="border">
+       <apex:column value="{!a.name}" headerValue="Name"/>
+       <apex:column value="{!a.phone}" headerValue="Phone"/>
+       <apex:column value="{!a.industry}" headerValue="Industry" />
+       <apex:column value="{!a.rating}" headerValue="Rating"/>
+       <apex:column value="{!a.ownership}" headerValue="Ownership"/>
+   </apex:dataTable>
+      <br/><br/>
+    <apex:dataTable value="{!items}" var="a" width="800" frame="border" rules="rows">
+       <apex:column value="{!a.name}" headerValue="Name"/>
+       <apex:column value="{!a.phone}" headerValue="Phone"/>
+       <apex:column value="{!a.industry}" headerValue="Industry" />
+       <apex:column value="{!a.rating}" headerValue="Rating"/>
+       <apex:column value="{!a.ownership}" headerValue="Ownership"/>
+   </apex:dataTable>
+       <br/><br/>
+    <apex:dataTable value="{!items}" var="a" width="800" frame="border" rules="rows" cellpadding="10">
+       <apex:column value="{!a.name}" headerValue="Name"/>
+       <apex:column value="{!a.phone}" headerValue="Phone"/>
+       <apex:column value="{!a.industry}" headerValue="Industry" />
+       <apex:column value="{!a.rating}" headerValue="Rating"/>
+       <apex:column value="{!a.ownership}" headerValue="Ownership"/>
+   </apex:dataTable>
+        <br/><br/>
+    <apex:dataTable value="{!items}" var="a" width="800" border="frame"  cellpadding="10" cellspacing="10">
+       <apex:column value="{!a.name}" headerValue="Name"/>
+       <apex:column value="{!a.phone}" headerValue="Phone"/>
+       <apex:column value="{!a.industry}" headerValue="Industry" />
+       <apex:column value="{!a.rating}" headerValue="Rating"/>
+       <apex:column value="{!a.ownership}" headerValue="Ownership"/>
+   </apex:dataTable>
+      <br/><br/>
+    <apex:dataTable value="{!items}" var="a" width="800" frame="border" rules="rows" cellpadding="10" headerClass="head">
+       <apex:column value="{!a.name}" headerValue="Name"/>
+       <apex:column value="{!a.phone}" headerValue="Phone"/>
+       <apex:column value="{!a.industry}" headerValue="Industry" />
+       <apex:column value="{!a.rating}" headerValue="Rating"/>
+       <apex:column value="{!a.ownership}" headerValue="Ownership"/>
+   </apex:dataTable>
+    <br/><br/>
+     <apex:dataTable value="{!items}" var="a" width="800" frame="border" rules="rows" cellpadding="10" headerClass="head" rowclasses="odd,even">
+       <apex:column value="{!a.name}" headerValue="Name"/>
+       <apex:column value="{!a.phone}" headerValue="Phone"/>
+       <apex:column value="{!a.industry}" headerValue="Industry" />
+       <apex:column value="{!a.rating}" headerValue="Rating"/>
+       <apex:column value="{!a.ownership}" headerValue="Ownership"/>
+   </apex:dataTable>
+     <br/><br/>
+     <apex:dataTable value="{!items}" var="a" width="800" frame="border" rules="rows" columnsWidth="200,200,200,100,100" cellpadding="10" headerClass="head" rowclasses="odd,even">
+       <apex:column value="{!a.name}" headerValue="Name"/>
+       <apex:column value="{!a.phone}" headerValue="Phone"/>
+       <apex:column value="{!a.industry}" headerValue="Industry" />
+       <apex:column value="{!a.rating}" headerValue="Rating"/>
+       <apex:column value="{!a.ownership}" headerValue="Ownership"/>
+   </apex:dataTable>
+</apex:page>

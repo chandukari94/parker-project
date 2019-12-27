@@ -1,0 +1,46 @@
+<aura:component controller="raman">
+    <aura:attribute name="acc" type="Account" default="{'sObjectType':'Account'}"/>
+    <aura:attribute name="accounts" type="object"/>
+    <aura:attribute name="fields" type="object"/>
+    <aura:handler name="init" value="{!this}" action="{!c.invoke}"/>
+    <lightning:layout>
+       <lightning:layoutItem size="4" padding="around-small">
+           <div class="boxone">
+           <fieldset class="slds-box slds-theme--default slds-container--small">
+               <legend id="newCampingItem" class="slds-text-heading--small 
+                                                       slds-p-vertical--medium">
+                        New Account 
+                    </legend>
+            <div class="three">
+           <lightning:input label="Name" value="{!v.acc.Name}"/>
+           <lightning:input label="Phone" value="{!v.acc.Phone}"/>
+           <lightning:input label="Industry" value="{!v.acc.Industry}"/>
+           <lightning:input label="Rating" value="{!v.acc.Rating}"/>
+           <lightning:input type="checkbox" label="Basic option" name="input1" value="{!v.acc.check__c}"/>
+           <lightning:input label="Check" value="{!v.acc.check__c}"/>
+           <button class="slds-button slds-button_icon slds-button_icon-border-filled" aria-haspopup="true" title="Show More">
+        
+          
+        <span class="slds-assistive-text">Show More</span>
+      </button>
+           </div>
+               <lightning:button label="save" 
+                                          class="slds-m-top--medium"
+                                          variant="brand"
+                                          onclick="{!c.createAccount }"/>
+           <!--<aura:set attribute="footer">
+               <lightning:button label="save" onclick="{!c.createAccount}"/>
+           </aura:set>-->
+           </fieldset>
+          </div>
+      </lightning:layoutItem>
+        
+      <lightning:layoutItem size="8" padding="around-small">
+          <div class="boxtwo">
+          <lightning:datatable data="{!v.accounts}" columns="{!v.fields }" keyField="id" />
+           </div>
+      </lightning:layoutItem>
+ 
+    </lightning:layout>
+    
+</aura:component>

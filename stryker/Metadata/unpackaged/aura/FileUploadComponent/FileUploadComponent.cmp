@@ -1,0 +1,51 @@
+<aura:component controller="LightningFileUploadHandler" implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="files" type="ContentVersion" default="{'sObjectType':'ContentVersion'}"/>
+    <aura:attribute name="contents" type="object"/>
+    <aura:attribute name="fields" type="object"/>
+    <aura:attribute name="Recordid" type="id" default="abcd"/>
+    <aura:attribute name="multiple" type="Boolean" default="true"/>
+    <aura:attribute name="disabled" type="Boolean" default="false"/>
+    <aura:attribute name="myBool" type="Boolean" default="true"/>
+    <aura:handler name="init" value="{!this}" action="{!c.invoke}"/>
+    
+    <Lightning:card>
+        <div class="c-container">
+            <lightning:layout verticalAlign="center" class="x-large" >
+                <lightning:layoutItem padding="around-small" flexibility="auto">
+                    <div class="custom-box">
+                        <lightning:fileUpload  name="fileUploader"
+                                            
+                                              multiple="{!v.multiple}"
+                                              accept="{!v.accept}"
+                                              disabled="{!v.disabled}"
+                                              recordId="{!v.Recordid}"
+                                              onuploadfinished="{! c.handleSave }"/>
+                    </div>
+                </lightning:layoutItem>
+                <lightning:layoutItem padding="around-small" flexibility="auto">
+                    <div class="custom-box">
+                        <lightning:input type="checkbox" label="Check" value="{!v.files.check__c}"/>
+                    </div>
+                </lightning:layoutItem>
+            </lightning:layout>
+        </div>
+        <!--<lightning:fileUpload  name="fileUploader"
+                          value="{!v.files.check__c}"
+                           multiple="{!v.multiple}"
+                           accept="{!v.accept}"
+                           disabled="{!v.disabled}"
+                           recordId="abcd"
+                           onuploadfinished="{! c.handleSave }"/>
+        <lightning:input type="checkbox" label="Basic option" name="input1" value="{!v.files.check__c}"/>
+         <lightning:input aura:id="fuploader"  type="file" name="file" 
+                         label="Upload File" multiple="false"/>
+        <div class="slds-text-body_small slds-text-color_error">{!v.files} </div>-->
+        
+        
+        
+        
+        <lightning:card>
+            <lightning:datatable data="{!v.contents}" columns="{!v.fields }" keyField="id" />
+        </lightning:card>
+    </Lightning:card>
+</aura:component>

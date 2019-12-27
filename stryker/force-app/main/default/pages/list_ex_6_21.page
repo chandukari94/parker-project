@@ -1,0 +1,24 @@
+<apex:page controller="list_ex_6_2">
+    <apex:form >
+            <apex:pageblock title="example">
+                <apex:pageBlockButtons location="top">
+                	<apex:commandButton value="save" action="{!addme}"/>
+                </apex:pageBlockButtons>
+                <apex:pageBlockSection title="Account Details">
+               
+                        <apex:inputText value="{!acc.Name}"/>
+                         <apex:inputText value="{!acc.Phone}"/>
+                         <apex:inputText value="{!acc.Industry}"/>
+    
+                </apex:pageBlockSection>  
+                
+    </apex:pageblock>
+        <apex:pageBlock >
+        	<apex:pageBlockTable value="{!Lists}" var="a">
+                <apex:column value="{!a.acc.Name}" />
+                 <apex:column value="{!a.acc.Phone}" />
+                
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

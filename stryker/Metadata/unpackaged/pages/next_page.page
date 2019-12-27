@@ -1,0 +1,66 @@
+<apex:page controller="project_app">
+    <apex:form >
+    	<apex:sectionHeader title="Application" subtitle="New Application"/>
+        
+        <apex:pageBlock title="Application">
+            <apex:pageBlockButtons >
+            	<apex:commandButton value="Save" action="{!save}"/>
+            </apex:pageBlockButtons>
+        	<apex:pageBlockSection title="Applicient Details " collapsible="false">
+            	<apex:pageBlockSectionItem >
+                    <apex:outputLabel value="First Name" />
+                    <apex:inputText value="{!pp.first_name__c}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Last Name" />
+                    <apex:inputText value="{!pp.last_name__c}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Email" />
+                    <apex:inputText value="{!pp.email__c}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="phone" />
+                    <apex:inputText value="{!pp.phone__c}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Agent" />
+                    <apex:inputText value="{!pp.Agent__c}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Applied Ammount" />
+                    <apex:inputText value="{!pp.App__c}"/>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection title="Income Details " collapsible="false">
+            	<apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Annual Revinue" />
+                    <apex:inputText value="{!pp.Annual_revinue__c}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="loan Type" />
+                    <apex:selectList value="{!pp.loan_type__c}" size="1">
+                        <apex:selectOption itemValue="none" itemLabel="-None-"/>
+                        <apex:selectOption itemValue="Education" itemLabel="Education"/>
+                        <apex:selectOption itemValue="housing" itemLabel="Housing"/>
+                        <apex:selectOption itemValue="vehical" itemLabel="Vehical"/>   
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Status" />
+                     <apex:selectList value="{!pp.status__c}" size="1">
+                        <apex:selectOption itemValue="none" itemLabel="-None-"/>
+                        <apex:selectOption itemValue="pending" itemLabel="Pending"/>
+                        <apex:selectOption itemValue="Approved" itemLabel="Approved"/>
+                        <apex:selectOption itemValue="Rejected" itemLabel="Rejected"/>   
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Address" />
+                    <apex:inputText value="{!pp.current_Address__c}"/>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

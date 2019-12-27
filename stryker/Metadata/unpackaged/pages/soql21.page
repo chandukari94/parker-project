@@ -1,0 +1,14 @@
+<apex:page controller="soql2">
+    <apex:form >
+        <apex:inputText value="{!searchtext}"/> &nbsp; &nbsp;
+    	<apex:commandButton value="Search" action="{!textsearch}"/>
+        <apex:pageBlock >
+        	<apex:datatable value="{!mylist}" var="x" border="frame" cellpadding="5px">
+                <apex:column value="{!x.name}" headervalue="Name" />
+                  <apex:column value="{!x.industry}" headervalue="Industry" />
+                  <apex:column value="{!x.rating}" headervalue="Rating" />
+                  <apex:column value="{!x.phone}" headervalue="Phone" />
+            </apex:datatable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

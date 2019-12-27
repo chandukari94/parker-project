@@ -1,0 +1,14 @@
+<apex:page controller="list_soql2" >
+    <apex:form >
+    
+      <apex:pageBlock title="Lead Names">
+          <apex:pageBlockButtons location="top">
+          	<apex:commandButton value="save" action="{!mm}"/>
+          </apex:pageBlockButtons>
+         <apex:pageBlockTable value="{!names}" var="x" >
+          <apex:column value="{!x}" />
+          </apex:pageBlockTable>
+    </apex:pageBlock>
+        
+    </apex:form>
+</apex:page>

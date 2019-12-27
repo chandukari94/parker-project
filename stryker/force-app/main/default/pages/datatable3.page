@@ -1,0 +1,30 @@
+<apex:page standardController="Account" recordSetVar="chandu" >
+    <style>
+    	.head  {
+       			 background:#D1EFF7;
+        		
+       			 
+        	   }
+        .tab{
+        		
+        		border-top:2px solid #D9DDDE;
+        		
+        	   }
+       
+    </style>
+    <apex:form >
+        
+            <apex:pageBlock tabStyle="lead" >
+                
+    	<apex:dataTable value="{!chandu}" var="a" frame="border"  cellpadding="5" rules="rows" columnsWidth="300,200,200,300" headerClass="head"  >
+            <apex:column value="{!a.name}" headerValue="NAME" styleClass="tab"/>
+            <apex:column value="{!a.phone}" headerValue="PHONE NUMBER" styleClass="tab"/>
+          <!--  <apex:column value="{!a.Fax}" headerValue="FAX" styleClass="tab" /> -->
+            <apex:column value="{!a.website}" headerValue="WEBSITE" styleClass="tab" />
+			
+        </apex:dataTable>
+                    
+    </apex:pageBlock>
+        
+        </apex:form>
+</apex:page>

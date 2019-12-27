@@ -1,0 +1,32 @@
+<apex:page standardController="lead">
+    <apex:sectionHeader title="Lead" subtitle="New Lead" help="/apex/page_2"/>
+    <apex:form >
+        <apex:pageblock title="Profile" helptitle="need help?" helpurl="/apex/page_2">
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!Save}" />
+                <apex:commandButton value="Cancel" action="{!Cancel}" />
+                
+                
+            </apex:pageBlockButtons>
+           <apex:pageBlockSection title="Basic Information" collapsible="false">
+               <apex:inputField value="{!lead.firstname}"/>
+                <apex:inputField value="{!lead.lastname}"/>
+               <apex:inputField value="{!lead.phone}"/>
+                <apex:inputField value="{!lead.email}"/>
+           </apex:pageBlockSection> 
+            <apex:pageBlockSection title="Address" collapsible="false">
+               <apex:inputField value="{!lead.phone}"/>
+                <apex:inputField value="{!lead.email}"/>
+                <apex:inputField value="{!lead.street}"/>
+                <apex:inputField value="{!lead.country}"/>
+                <apex:inputField value="{!lead.city}"/>
+           </apex:pageBlockSection>
+            <apex:pageBlocksection title="my page" collapsible="false">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Record Name" />
+                    <apex:inputText />
+                </apex:pageBlockSectionItem>
+            </apex:pageBlocksection>
+     	</apex:pageblock>
+    </apex:form>
+</apex:page>

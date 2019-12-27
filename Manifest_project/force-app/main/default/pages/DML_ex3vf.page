@@ -1,0 +1,15 @@
+<apex:page controller="DML_Example_3">
+     <apex:form id="fm">
+        <apex:commandButton value="Update" action="{!updateRating}" reRender="fm" />
+    	<apex:dataTable value="{!accounts}" var="a" cellpadding="10" width="800" rules="rows" frame="border">
+        	<apex:column >
+                <apex:facet name="header"><Apex:inputCheckbox /></apex:facet>
+                <apex:inputCheckbox value="{!a.flag}" />   controller="DML_Example_3"
+            </apex:column>
+            <apex:column value="{!a.acc.Name}" headerValue="Name" />
+            <apex:column value="{!a.acc.Industry}" headerValue="Industry" />
+            <apex:column value="{!a.acc.Rating}" headerValue="Rating" />
+            <apex:column value="{!a.acc.Phone}" headerValue="Phone" />
+        </apex:dataTable>
+    </apex:form>
+</apex:page>

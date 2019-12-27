@@ -1,0 +1,66 @@
+<apex:page controller="loan_usecase">
+    <apex:sectionHeader title="Loan" subtitle="New Loan"/>
+     <apex:pageMessages />
+    <apex:form >
+    <apex:outputlabel value="loantype"  />
+    <apex:selectList size="1" value="{!loantype}" id="one">
+        <apex:selectOption itemValue="none" itemLabel="--None--" />
+        <apex:selectOption itemValue="houseing" itemLabel="Housing"  />
+        <apex:selectOption itemValue="education" itemLabel="Education" />
+    </apex:selectList>
+        &nbsp;
+        &nbsp;
+        
+        <apex:commandButton value="Go!" action="{!go}"/>
+        <apex:pageBlock title="Loan" tabStyle="lead" >
+                    <apex:pageBlockButtons location="top">
+                        <apex:commandButton value="Submit"  action="{!go}"/>
+                    </apex:pageBlockButtons>
+        		<apex:pageBlockSection title="Customer Details" collapsible="false" >
+                    <apex:pageBlockSectionItem >
+                        <apex:outputlabel value="Last Name" />
+                        <apex:inputtext value="{!lastname}" />
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputlabel value="First Name" />
+                        <apex:inputtext value="{!firstname}"  />
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputlabel value="Email" />
+                        <apex:inputtext value="{!email}"  />
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputlabel value="Phone" />
+                        <apex:inputtext value="{!phone}" />
+                    </apex:pageBlockSectionItem>
+            	</apex:pageBlockSection>
+            
+            
+            
+            <apex:pageBlockSection title="Education details" collapsible="false" >
+                    <apex:pageBlockSectionItem >
+                        <apex:outputlabel value="qualification" />
+                        <apex:inputtext value="{!qualification}" />
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputlabel value="city" />
+                        <apex:inputtext value="{!city}"  />
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputlabel value="amount" />
+                        <apex:inputtext value="{!amount}"  />
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputlabel value="course" />
+                        <apex:inputtext value="{!course}" />
+                    </apex:pageBlockSectionItem>
+            	</apex:pageBlockSection>
+        </apex:pageBlock>
+        </apex:form>
+</apex:page>

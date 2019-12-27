@@ -1,0 +1,12 @@
+<apex:page controller="list_soql_list">
+    <apex:form >
+    	<apex:pageBlock >
+        	<apex:pageBlockButtons location="top">
+            	<apex:commandButton value="save" action="{!save}"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockTable value="{!data}" var="a">
+            	<apex:column value="{!a}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,18 @@
+<apex:page controller="DML_duplicatenotallow">
+    <apex:form >
+        <apex:pageMessages />
+    	<apex:pageBlock title="Account">
+        	<apex:pageBlockButtons location="top">
+                <apex:commandButton value="Save" action="{!duplicate}" />
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection >
+                <apex:inputText value="{!acc.name}" />
+                <apex:inputText value="{!acc.industry}" />
+                <apex:inputText value="{!acc.rating}" />
+                <apex:inputText value="{!acc.ownership}" />
+                <apex:inputText value="{!acc.Phone}" />
+                <apex:inputText value="{!acc.Active__c}" />
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

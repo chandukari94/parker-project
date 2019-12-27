@@ -1,0 +1,41 @@
+<apex:page controller="project_app" >
+   
+    <apex:form >
+        <!--<apex:pageMessages />--->
+    	<apex:sectionHeader title="Application" subtitle="New Application"/>
+       <b>Search:</b> <apex:inputText value="{!selected}" />&nbsp;
+        <apex:commandButton value="Go!" action="{!go}" style="padding:5px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <apex:commandButton value="New" action="{!next}" style="width:70px;" />&nbsp;&nbsp;&nbsp;
+        <apex:commandButton value="Delete" action="{!del}" style="width:70px;background: #ff4d4d;" /><br/>
+        &nbsp;<br/>
+        <apex:pageBlock >
+            <apex:pageBlockButtons location="bottom">
+            	<!--<apex:commandLink value="First" action="{!controller.first}" rendered="{! controller.hasPrevious}" />
+                <apex:commandLink value="Prev" action="{!controller.previous}" rendered="{! controller.hasPrevious}" />-->
+                <apex:commandLink value="Next" action="{!pageNext}"  />
+               <!-- <apex:commandLink value="last" action="{!controller.Last}" rendered="{! controller.hasNext}"/>-->
+            </apex:pageBlockButtons>
+        	<apex:pageBlockTable value="{!wraplist}" var="x">
+                <apex:column >
+                <apex:facet name="header">Action</apex:facet>
+                <apex:inputCheckbox value="{!x.flag}"/>
+                </apex:column>
+                <apex:column >
+                <apex:facet name="header"></apex:facet>
+                <apex:commandlink value="Edit" style="color:blue;" />&nbsp;|&nbsp;
+                <apex:commandlink value="Del" style="color:blue;" />    
+                </apex:column>
+                <apex:column >
+                <apex:facet name="header">First Name</apex:facet>
+                    <apex:commandLink value="{!x.ap.first_name__c}"  />
+                </apex:column>
+            	<!--<apex:column value="{!x.ap.first_name__c}" headerValue="First Name"/>-->
+                <apex:column value="{!x.ap.last_name__c}" headerValue="Last Name"/>
+                <apex:column value="{!x.ap.email__c}" headerValue="Email"/>
+                <apex:column value="{!x.ap.phone__c}" headerValue="Phone"/>
+                <apex:column value="{!x.ap.status__c}" headerValue="Approval Status"/>
+            </apex:pageBlockTable>
+            
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

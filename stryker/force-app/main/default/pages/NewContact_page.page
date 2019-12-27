@@ -1,0 +1,195 @@
+<apex:page >
+    <apex:sectionHeader title="Contact Edit" subtitle="New Contact" help="/apex/web1/"/>
+    <style>
+    	.Block{
+        padding:0px;
+        }
+    </style>
+    <h6>
+        Contacts not associated with accounts are private and cannot be viewed by other users or included in reports.
+    </h6>
+    &nbsp;<br/>
+    &nbsp;<br/>
+    <apex:form >
+    	<apex:pageBlock title="Contact Edit" tabStyle="Contact" >
+        	<apex:pageBlockButtons >
+        		<apex:commandButton value="Save"/>
+            	<apex:commandButton value="Save&New"/>
+            	<apex:commandButton value="Cancel"/>
+        	</apex:pageBlockButtons>
+            <apex:pageBlockSection title="Contact Information" collapsible="false">
+				 <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="Owner"/>
+                     <apex:inputText />
+                 </apex:pageBlockSectionItem> 
+                
+                 <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="Phone"/>
+                     <apex:inputText />
+                 </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="Salutation"/>
+                     <apex:selectList size="1">
+                         <apex:selectOption itemLabel="--None--" itemValue="none" /> 
+                         <apex:selectOption itemLabel="Mr." itemValue="Mr" />
+                         <apex:selectOption itemLabel="Mrs." itemValue="none" />
+                         <apex:selectOption itemLabel="Ms." itemValue="none" />
+                         <apex:selectOption itemLabel="Dr." itemValue="none" />
+                         <apex:selectOption itemLabel="Prof." itemValue="none" />
+                     </apex:selectList>
+                 </apex:pageBlockSectionItem> 
+                
+                <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="Home Phone"/>
+                     <apex:inputText />
+                 </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="First Name"/>
+                     <apex:inputText />
+                 </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="Mobile"/>
+                     <apex:inputText />
+                 </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="Last Name"/>
+                     <apex:inputText required="true"/>
+                 </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="Other Phone"/>
+                     <apex:inputText />
+                 </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="Account Name"/>
+                     <apex:inputText />
+                 </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="Fax"/>
+                     <apex:inputText />
+                 </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="Department"/>
+                     <apex:inputText />
+                 </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="Assistant"/>
+                     <apex:inputText />
+                 </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="Birth Date"/>
+                     <apex:inputText />
+                 </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="Asst.Phone"/>
+                     <apex:inputText />
+                 </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="Reports"/>
+                     <apex:inputText />
+                </apex:pageBlockSectionItem><br/>
+                
+                <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="LeadSourse" />
+                     <apex:selectList size="1" >
+                         <apex:selectOption itemLabel="--None--" itemValue="none" /> 
+                         <apex:selectOption itemLabel="Web" itemValue="Mr" />
+                         <apex:selectOption itemLabel="Phone Enquire" itemValue="none" />
+                         <apex:selectOption itemLabel="Patner Riffral" itemValue="none" />
+                         <apex:selectOption itemLabel="Purchased List" itemValue="none" />
+                         <apex:selectOption itemLabel="Other" itemValue="none" />
+                     </apex:selectList>
+                 </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            
+            
+            <apex:pageBlockSection title="Address Information" collapsible="false" >
+                	<apex:pageBlockSectionItem >
+                    	 <apex:outputLabel value="Mailing Street"/>
+                    	 <apex:inputTextarea cols="25" rows="3"/> 
+                	</apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    	 <apex:outputLabel value="Other Street"/>
+                    	 <apex:inputTextarea cols="25" rows="3" />
+                	</apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="Mailing City"/>
+                     <apex:inputText />
+                 </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="Other City"/>
+                     <apex:inputText />
+                 </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Mailing State/Provience"/>
+                     <apex:inputText />
+                 </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Other State/Provience"/>
+                     <apex:inputText />
+                 </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Mailling zip/PostalCode"/>
+                     <apex:inputText />
+                 </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Other Zip/PostalCode"/>
+                     <apex:inputText />
+                 </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Mailling Country"/>
+                     <apex:inputText />
+                 </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Other Country"/>
+                     <apex:inputText />
+                 </apex:pageBlockSectionItem>
+            
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection title="Additional Information" collapsible="false">
+               		<apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Languages"/>
+                     <apex:inputText />
+                 </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Level"/>
+                    <apex:selectList size="1">
+                         <apex:selectOption itemLabel="--None--" itemValue="none" /> 
+                         <apex:selectOption itemLabel="Primary" itemValue="Mr" />
+                         <apex:selectOption itemLabel="Secondary" itemValue="none" />
+                         <apex:selectOption itemLabel="Tertiary" itemValue="none" />
+                    </apex:selectList>
+                 </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection title="Decription Inforamation" collapsible="false" dir="ltr">
+					<apex:pageBlockSectionItem >
+                		<apex:outputLabel value="Description"/>	
+                	<apex:inputTextarea cols="80" rows="7" />
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+    	</apex:pageBlock>
+    </apex:form>
+</apex:page>

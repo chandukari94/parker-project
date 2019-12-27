@@ -1,0 +1,42 @@
+<apex:page controller="list_student_4">
+    
+    <apex:sectionHeader title="Students" subtitle="New Student"/>
+    
+    <apex:form >
+    	<apex:pageBlock title="Student Marks">
+        	<apex:pageBlockButtons location="top">
+                <apex:commandButton value="Save" action="{!saveme}"/>
+            </apex:pageBlockButtons>
+            	<apex:pageBlockSection columns="1">
+                		<apex:pageBlockSectionItem >
+                    		<apex:outputLabel >Name</apex:outputLabel>
+                            <apex:inputText value="{!std.name}"/>
+                    	</apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                    		<apex:outputLabel >Mathamatics</apex:outputLabel>
+                            <apex:inputText value="{!std.maths}"/>
+                    	</apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                    		<apex:outputLabel >Physics</apex:outputLabel>
+                            <apex:inputText value="{!std.physics}"/>
+                    	</apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                    		<apex:outputLabel >Chemistry</apex:outputLabel>
+                            <apex:inputText value="{!std.chemistry}"/>
+                    	</apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+           
+        </apex:pageBlock>
+        <apex:pageBlock >
+        	<apex:pageBlockTable value="{!stdmarks}" var="s" border="frame">
+            	<apex:column value="{!s.name}" headerValue=" STUDENT_NAME"/>
+                <apex:column value="{!s.maths}" headerValue="MATHAMATICS"/>
+                <apex:column value="{!s.physics}" headerValue="PHYSICS"/>
+                <apex:column value="{!s.chemistry}" headerValue="CHEMISTRY"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

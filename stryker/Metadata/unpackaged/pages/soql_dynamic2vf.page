@@ -1,0 +1,7 @@
+<apex:page controller="soql_dynamic2">
+    <apex:form >
+    	<apex:selectList value="{!selected}">
+            <apex:selectOptions value="{!options}"/>
+        </apex:selectList>
+    </apex:form>
+</apex:page>

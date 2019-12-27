@@ -1,0 +1,33 @@
+<apex:page controller="list_example_2">
+    <apex:form >
+    	<apex:pageBlock title="Emlpoyee Details">
+        		<apex:pageBlockButtons location="top">
+            		<apex:commandButton value="save" action="{!saveme}"/>
+            	</apex:pageBlockButtons>
+            <apex:pageBlockSection >
+            	<apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Name" />
+                    <apex:inputText value="{!emp.name}"/>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Age" />
+                    <apex:inputText value="{!emp.age}"/>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Salary" />
+                    <apex:inputText value="{!emp.salary}"/>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        <apex:pageBlock >
+        	<apex:pageBlockTable value="{!emplist}" var="e" border="frame">
+            	<apex:column value="{!e.name}" headerValue="NAME"/>
+                <apex:column value="{!e.age}" headerValue="AGE"/>
+                <apex:column value="{!e.salary}" headerValue="SALARY"/>
+                
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

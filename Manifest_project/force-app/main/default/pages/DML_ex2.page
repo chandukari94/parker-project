@@ -1,0 +1,21 @@
+<apex:page controller="DML_ex2">
+    <apex:form >
+    	<apex:pageBlock title="Account">
+        	<apex:pageBlockButtons location="top">
+                <apex:commandButton value="Save" action="{!create}" />
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection title="Account" collapsible="false">
+                <apex:inputField value="{!acc.Name}" />
+                <apex:inputField value="{!acc.Industry}" />
+                <apex:inputField value="{!acc.Rating}" />
+                <apex:inputField value="{!acc.Phone}" />
+            </apex:pageBlockSection>
+            <apex:pageBlockSection collapsible="false" title="Contact">
+                <apex:inputText value="{!con.LastName}" />
+                <apex:inputText value="{!con.FirstName}" />
+                <apex:inputText value="{!con.Phone}" />
+                <apex:inputText value="{!con.Email}" />
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,22 @@
+<apex:page controller="List_Example_3">
+    <apex:form >
+        <apex:pageBlock title="Account">
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="Add" action="{!addMe}" />
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection >
+                <apex:inputText value="{!acc.Name}" />
+                <apex:inputText value="{!acc.Industry}" />
+                <apex:inputText value="{!acc.Phone}" />
+                <apex:inputText value="{!acc.Rating}" />
+            </apex:pageBlockSection>
+            <br/><br/>
+            <apex:pageBlockTable value="{!accounts}"  var="a" rendered="{!accounts.size>0}">
+                <apex:column value="{!a.name}" />
+                <apex:column value="{!a.phone}" />
+                <apex:column value="{!a.industry}" />
+                <apex:column value="{!a.rating}" />
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

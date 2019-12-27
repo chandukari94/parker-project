@@ -1,0 +1,47 @@
+<apex:page controller="acc_task" >
+    <apex:form >
+    	<apex:pageBlock title="Customer">
+            <apex:pageBlockButtons location="top">
+            	<apex:commandButton value="Save" action="{!datatable}"/>
+            </apex:pageBlockButtons>
+            
+            <apex:pageBlockSection title="Account Details">
+                <apex:pageBlockSectionItem >
+                	<apex:outputLabel value="Name"/>
+                    <apex:inputText value="{!ac.name}"/>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                	<apex:outputLabel value="Rating"/>
+                    <apex:inputText value="{!ac.rating}"/>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                	<apex:outputLabel value="Industry"/>
+                    <apex:inputText value="{!ac.industry}"/>
+                </apex:pageBlockSectionItem>
+            	
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Contact Details">
+            	<apex:pageBlockSectionItem >
+                	<apex:outputLabel value="First Name"/>
+                    <apex:inputText value="{!cc.firstname}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                	<apex:outputLabel value="Last Name"/>
+                    <apex:inputText value="{!cc.lastname}"/>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        <apex:pageBlock >
+        	<apex:pageblockTable value="{!wraplist}" var="x">
+                <apex:column value="{!x.acc.name}" headerValue="Name"/>
+                <apex:column value="{!x.acc.rating}" headerValue="Rating"/>
+                <apex:column value="{!x.acc.industry}" headerValue="Industry"/>
+                <apex:column value="{!x.con.Firstname}" headerValue="first Name"/>
+                <apex:column value="{!x.con.lastname}" headerValue="Last Name"/>
+            </apex:pageblockTable>
+        </apex:pageBlock>
+        
+    </apex:form>
+</apex:page>

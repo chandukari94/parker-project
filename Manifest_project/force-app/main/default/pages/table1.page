@@ -1,0 +1,17 @@
+<apex:page controller="table" recordSetVar="{!items}">
+    <apex:sectionHeader title="chandu" subtitle="chandu"/>
+    <apex:form >
+    <apex:pageBlock title="Table">
+    	<apex:dataTable value="{!items}" var="a" border="frame" align="center" width="400,400,400" rules="rows"  >
+            <apex:column >
+        		<apex:facet name="header">name1</apex:facet>
+                <apex:outputLabel value="{!col1}"/>
+            </apex:column>
+            <apex:column >
+        		<apex:facet name="header">name1</apex:facet>
+                <apex:outputLabel value="{!col1}"/>
+            </apex:column>
+        </apex:dataTable>
+    </apex:pageBlock>
+        </apex:form>
+</apex:page>

@@ -1,0 +1,51 @@
+<aura:component controller="raman" >
+    <aura:attribute name="acc" type="Account" default="{'sObjectType':'Account'}"/>
+    <aura:attribute name="isOpen" type="boolean" default="false"/>
+     
+    <lightning:button variant="brand"
+                      label="New Account"
+                      title="New Account"
+                      onclick="{! c.openModel }" />
+    <aura:if isTrue="{!v.isOpen}">
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" 
+                 aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            
+            <div class="slds-m-around_xx-large">
+                <lightning:card class="card">
+                    <div class="slds-modal__container">
+                        <header class="slds-model__header">
+                            <lightning:buttonIcon iconName="utility:close"
+                                                  onclick="{! c.closeModel }"
+                                                  alternativeText="close"
+                                                  variant="bare-inverse"
+                                                  class="slds-modal__close"/>
+                            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">
+                                Create New Account
+                            </h2>
+                        </header>
+                        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <lightning:layout>
+                            <lightning:layoutItem size="4" padding="around-small">
+                                <lightning:input label="Name" value="{!v.acc.Name}"/>
+                                <lightning:input label="Phone" value="{!v.acc.Phone}"/>
+                                <lightning:input label="Industry" value="{!v.acc.Industry}"/>
+                                <lightning:input label="Rating" value="{!v.acc.Rating}"/>
+                            </lightning:layoutItem>
+                        </lightning:layout>
+                        </div>
+                        <footer class="slds-model__footer">
+                            <lightning:button variant="neutral"
+                                              label="Cancel"
+                                              title="Cancel"
+                                              onclick="{! c.closeModel }"/>
+                            <lightning:button label="save" 
+                                              variant="neutral"
+                                              onclick="{!c.createAccount }"/>
+                        </footer>
+                    </div>
+                </lightning:card>
+            </div>
+             
+        </section>  
+    </aura:if>
+</aura:component>
