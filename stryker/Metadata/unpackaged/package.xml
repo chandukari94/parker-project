@@ -22,6 +22,10 @@
     </types>
     <types>
         <members>*</members>
+        <name>AssignmentRules</name>
+    </types>
+    <types>
+        <members>*</members>
         <name>AuraDefinitionBundle</name>
     </types>
     <types>
@@ -37,8 +41,20 @@
         <name>LightningComponentBundle</name>
     </types>
     <types>
+        <members>MyProfile</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>SharingOwnerRule</name>
+    </types>
+    <types>
         <members>*</members>
         <name>StaticResource</name>
+    </types>
+    <types>
+        <members>Security</members>
+        <name>Settings</name>
     </types>
     <version>47.0</version>
 </Package>

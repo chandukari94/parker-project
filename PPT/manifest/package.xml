@@ -32,32 +32,5 @@
         <members>*</members>
         <name>StaticResource</name>
     </types>
-    <types>
-        <members>*</members>
-        <name>CustomObject</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>CustomTab</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>AssignmentRules</name>
-    </types>
-	<types>
-        <members>Security</members>
-        <name>Settings</name>
-    </types>
-	
-	<types>
-        <members>MyProfile</members>
-        <name>Profile</name>
-    </types>
-	
-	
-	<types>
-        <members>*</members>
-        <name>SharingOwnerRule</name>
-    </types>
     <version>47.0</version>
 </Package>

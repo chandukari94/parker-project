@@ -9,20 +9,14 @@
             "c/bikecard": [
                 "bikecard/bikecard.js"
             ],
-            "c/web_one": [
-                "web_one/web_one.js"
-            ],
-            "c/Web_Two": [
-                "Web_Two/Web_Two.js"
+            "c/opportunity_datatable": [
+                "opportunity_datatable/opportunity_datatable.js"
             ],
             "c/web_Two": [
                 "web_Two/web_Two.js"
             ],
-            "c/Opportunity_datatable": [
-                "Opportunity_datatable/Opportunity_datatable.js"
-            ],
-            "c/opportunity_datatable": [
-                "opportunity_datatable/opportunity_datatable.js"
+            "c/web_one": [
+                "web_one/web_one.js"
             ]
         }
     },
