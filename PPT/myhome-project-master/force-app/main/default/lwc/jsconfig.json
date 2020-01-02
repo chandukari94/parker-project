@@ -2,11 +2,7 @@
     "compilerOptions": {
         "experimentalDecorators": true,
         "baseUrl": ".",
-        "paths": {
-            "c/webOne": [
-                "webOne/webOne.js"
-            ]
-        }
+        "paths": {}
     },
     "include": [
         "**/*",

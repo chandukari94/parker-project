@@ -1,0 +1,212 @@
+SFDX:
+------
+==>first we have to Install sfdx cli.
+			-->https://developer.salesforce.com/tools/sfdxcli
+			   -->click the link and dowload the windows-64 or windows-32.
+==>we have to install the vs code editor
+			-->https://code.visualstudio.com/download
+			   -->click the link and dowload the windows-64 or windows-32.
+==>Open the command prompt(windows+r) and type cmd then open.
+==>then check the sfdx successfully instaalled or not.
+		-->type 
+		   -->sfdx --hlep.
+		      -->getting like this
+			 Salesforce CLI
+
+			VERSION
+  			sfdx-cli/7.33.2-045d48473e win32-x64 node-v10.15.3
+
+			USAGE
+ 			 $ sfdx [COMMAND]
+
+			COMMANDS
+  			commands  list all the commands
+  			force     tools for the Salesforce developer
+  			help      display help for sfdx
+  			plugins   add/remove/create CLI plug-ins
+  			update    update the sfdx CLI
+  			which     show which plugin a command is in
+
+			TOPICS
+  			Run help for each topic below to view subcommands
+
+  			commands  list all the commands
+  			force     tools for the Salesforce developer
+  			plugins   add/remove/create CLI plug-ins
+
+==>verify your plugin version
+		-->sfdx plugins --core
+		   -->getting like this
+			@oclif/plugin-commands 1.2.3 (core)
+			@oclif/plugin-help 2.2.1 (core)
+			@oclif/plugin-not-found 1.2.3 (core)
+			@oclif/plugin-plugins 1.7.8 (core)
+			@oclif/plugin-update 1.3.9 (core)
+			@oclif/plugin-warn-if-update-available 1.7.0 (core)
+			@oclif/plugin-which 1.0.3 (core)
+			@salesforce/sfdx-trust 3.0.5 (core)
+			analytics 1.2.1 (core)
+			generator 1.1.1 (core)
+			salesforcedx 47.6.2
+			├─ salesforcedx-templates 47.6.2
+			└─ salesforce-alm 47.9.0
+
+			sfdx-cli 7.33.2 (core)
+
+==>Run this command to return a list of the command families in the force topic:
+		-->sfdx force --help
+==>This command returns all the force commands:
+		-->sfdx force:doc:commands:list
+		   -->display the all commands.
+
+==>first we should create a project or connect authorised devhub(sandbox/production)
+	-->command:sfdx force:project:create --projectname stryker    
+		-->stryyker is project name.
+
+==>Then set the path of the project
+	-->command:cd space project name
+
+==>Open the dev hub org like sanbox or production
+	-->command:sfdx force:org:open -u sfdxdevhub@123.com
+				-->here sfdxdevhub@123.com is devhuborg name(sandbox name or production name).
+==>Then create scratch org
+	-->command:sfdx force:org:create -f config/project-scratch-def.json -a stryker@111.com   
+									--->here stryker@111.com is scratch org name
+==>Then getting like this:
+	Successfully created scratch org: 00D9D0000000VsCUAU, username: test-adiptr7hnttj@example.com
+
+==>dispaly the details of scratch org
+	-->sfdx force:org:display -u stryker@111.com   
+	-->then getting like this
+
+		Access Token     00D9D0000000VsC!AQcAQPw39rpGQAwVDfz.i.KVp0O3YAfqU_XwAwzuIIVuAnbwiAGeJDT6HzhYCgVpje6xZ27CuVot.g1qDCuhL2cNR6Xkzt46
+		Alias            stryker@111.com   
+		Client Id        PlatformCLI
+		Created By       sfdxdevhub@123.com
+		Created Date     2019-12-05T04:49:01.000+0000
+		Dev Hub Id       sfdxdevhub@123.com
+		Edition          Developer
+		Expiration Date  2019-12-12
+		Id               00D9D0000000VsCUAU
+		Instance Url     https://data-java-4965-dev-ed.cs76.my.salesforce.com/
+		Org Name         Demo company
+		Status           Active
+		Username         test-adiptr7hnttj@example.com
+
+==>then set the password of Scratch org.
+		-->sfdx force:user:password:generate -u stryker@111.com   
+		-->getting like this
+			Successfully set the password "AF3MH|^sD*" for user test-adiptr7hnttj@example.com.
+			You can see the password again by running "sfdx force:user:display -u test-adiptr7hnttj@example.com".
+
+==>command to see all the required values to install the package:
+	-->command:sfdx force:org:display -u TempUnmanaged
+	-->then we getting like this:
+
+	=== Org Description
+	KEY              VALUE
+	───────────────  ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+	Access Token     00D9D0000000VsC!AQcAQPw39rpGQAwVDfz.i.KVp0O3YAfqU_XwAwzuIIVuAnbwiAGeJDT6HzhYCgVpje6xZ27CuVot.g1qDCuhL2cNR6Xkzt46
+	Alias            TempUnmanaged
+	Client Id        PlatformCLI
+	Created By       sfdxdevhub@123.com
+	Created Date     2019-12-05T04:49:01.000+0000
+	Dev Hub Id       sfdxdevhub@123.com
+	Edition          Developer
+	Expiration Date  2019-12-12
+	Id               00D9D0000000VsCUAU
+	Instance Url     https://data-java-4965-dev-ed.cs76.my.salesforce.com/
+	Org Name         Demo company
+	Password         AF3MH|^sD*
+	Status           Active
+	Username         test-adiptr7hnttj@example.com
+
+==>then we brows the Instance Url,
+==>then click the custom domain,if we dont see the custom domain then click ligin with diff Account.
+==>then login the org with user name and password.
+==>
+-------------------------------------------------------------------------------------------------------------------
+VS Code Editor:
+---------------
+
+==>Open the vs code editor.
+
+==>open the marketpalce on left side on the monitor.
+	-->then type salesforce extension pack
+	   -->Install that.
+	
+==>click ctrl+shift+p then open the command pattle(open the setting icon left side bottom of the monitor,first one command pattle).
+==>Then type SFDX:Autherise a Dev hub
+	-->then Automatically open login page
+	  -->enter the username and password.
+==>Then create a scratch org.
+	-->open command pattle
+	  -->enter create defaultscratch org
+	    -->and enter the alias name of the scratch org.
+		-->created the scratch org.
+		   -->in the command pattle type SFDX:open default org.
+		      -->then automatically open scratch org
+==>Next,create the project
+	-->open the command pattle,type create a project
+	   -->then created project.
+==>then pull source from scratch org
+	-->open command pattel,type SFDX:pull source from scratch org.
+	  -->if you create the any objects ,page layots,permissionsets all those come to project in vs code editor.
+==>if you develop the code like apexclass,triggers,components,applications etc,.all those push to scratch org
+	-->open the command pattle,type push to defult org.
+	   -->then automatically push the code vs code editor to scracth org.
+		it will display the all code in scrach org developer console.
+-----------------------------------------------------------------------------------------------------------------
+Github:
+------
+==>open the marketpalce on left side on the monitor.
+	-->type the SCM
+	   -->Install that.
+==>open the command pattle,Type open github.
+	-->Then automaticlally open the login page
+	  -->enter the username and password. 
+==>open the command pattle,Type GIT:clone
+		-->set the repository link.
+==>Then open the command pattle,Type Git:add remote
+	-->enter remote name
+	   -->Enter the repository URL.
+==>left side show the git symbel.
+	-->then if you changes is happend in your project then automatically show notification.
+	  -->commit that changes,Before the commit enter the commit message.
+
+==>then open the command pattle,Type git:push to
+	-->enter the remote(just before we create the remote,that is popup bellow,)
+	   -->Then automatically store the git hub in your repository.
+
+==>then open the git hub and perticular repository,in that display the version control with commit message.
+
+-----------------------------------------------------------------------------------------------------------
+
+==>Based on edition we have some lilmitations creating the scratch orgs.
+
+	
+				      Limit    Active
+		developper eddition	6	 3
+		Enterprise Edition      80       40
+		Unlimited Edition      200      100
+		Performence Edition    200      100
+------------------------------------------------------------------------------------------------------------------
+==>SOQL also run the vs code editor
+	-->open the command pattle
+	   -->in the project folder we have a soql folder.in that folder we write the soql querry and 
+	      -->select the query and open the command pattle
+	         -->Type,Execute soql query and enter the execute with REST API
+                    -->then fetching the data.
+
+==>if we run the SOQL querry in vscode editor terminal
+	-->sfdx force:data:soql:query -q "SELECT Id, Name,Industry,rating FROM Account"
+	-->Then we are getting like this,
+
+	ID                  NAME       INDUSTRY     RATING
+	──────────────────  ─────────  ───────────  ──────
+	0019D0000078ZA6QAM  Account-3  Agriculture  Cold
+	0019D0000078InxQAE  Account-1  null         null
+	0019D0000078Z9rQAE  Account-2  Banking      Hot
+	Total number of records retrieved: 3.
+
+
