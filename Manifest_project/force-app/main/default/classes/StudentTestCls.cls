@@ -32,7 +32,5 @@ public class StudentTestCls {
         delete stu;
     }
     
-    
-    
-
+      
 }

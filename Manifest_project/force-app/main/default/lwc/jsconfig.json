@@ -3,6 +3,9 @@
         "experimentalDecorators": true,
         "baseUrl": ".",
         "paths": {
+            "c/accoountdatable": [
+                "accoountdatable/accoountdatable.js"
+            ],
             "c/bike": [
                 "bike/bike.js"
             ],
