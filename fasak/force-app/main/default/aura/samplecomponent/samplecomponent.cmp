@@ -1,7 +1,0 @@
-<aura:component implements="flexipage:availableForAllPageTypes"  >
-<lightning:card>    
-<div>
-    This is sample component
-</div>
-</lightning:card>
-</aura:component>

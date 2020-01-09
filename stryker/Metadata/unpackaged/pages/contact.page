@@ -1,8 +1,0 @@
-<apex:page controller="Contactss" >
-    <apex:sectionHeader title="contact" subtitle="New Contact"/>
-    <apex:pageBlock title="Contact Details">
-    		<apex:pageBlockSection title="Profile">
-        		
-        	</apex:pageBlockSection>
-    </apex:pageBlock>
-</apex:page>

@@ -1,7 +1,0 @@
-<apex:page controller="siva">
-    <apex:form >
-    	<apex:pageBlock title="Account">
-        	
-        </apex:pageBlock>
-    </apex:form>
-</apex:page>

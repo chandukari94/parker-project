@@ -1,9 +1,0 @@
-<apex:page controller="acc_datatable" >
-    <apex:form >
-    	<apex:dataTable value="{!acc_list}" var="x" frame="border" rules="rows"  columnsWidth="250,200,200">
-            <apex:column value="{!x.name}" headerValue="Name" />
-            <apex:column value="{!x.industry}" headerValue="Industry" />
-            <apex:column value="{!x.rating}" headerValue="Rating" />
-        </apex:dataTable>
-    </apex:form>
-</apex:page>

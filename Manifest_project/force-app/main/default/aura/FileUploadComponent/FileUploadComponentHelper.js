@@ -1,5 +1,0 @@
-({  
-     getuploadedFiles:function(component){
-         
-    }
- })

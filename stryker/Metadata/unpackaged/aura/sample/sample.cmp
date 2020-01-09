@@ -1,3 +1,0 @@
-<aura:component  >
-    <lightning:card title="Account" IconName="standard:account" />
-</aura:component>
