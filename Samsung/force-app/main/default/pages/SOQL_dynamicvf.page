@@ -1,0 +1,20 @@
+<apex:page controller="SOQL_dynamic">
+    <apex:form id="fm">
+    	<apex:outputPanel >
+            <br/><br/>
+        	<apex:selectList multiselect="true" value="{!selected}" style="height:150px;width:150px;">
+                <apex:selectOptions value="{!options}" />
+                
+            </apex:selectList>
+            <apex:commandButton value="Go" action="{!callme}" reRender="fm" />
+        </apex:outputPanel>
+        <br/><br/>
+        <apex:dataTable value="{!accounts}" var="rec" cellPadding="10" width="800" rules="rows" frame="border" rendered="{!!ISNULL(accounts)}" >
+        	<apex:repeat value="{!selected}" var="fld">
+                <apex:column value="{!rec[fld]}" >
+                    <apex:facet name="header">{!fld}</apex:facet>
+                </apex:column>
+            </apex:repeat>
+        </apex:dataTable>  
+    </apex:form>
+</apex:page>

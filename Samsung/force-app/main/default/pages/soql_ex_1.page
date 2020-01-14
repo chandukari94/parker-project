@@ -1,0 +1,18 @@
+<apex:page controller="soql_ex_1">
+    
+    <style>
+    .head{
+        background:#ADD8E6;
+        }
+    </style>
+    <apex:form >
+    	Enter Rating or Industry value:<apex:inputText value="{!searchtext}"/>&nbsp;&nbsp;
+        <apex:commandButton value="Go!" action="{!search}"/>
+        &nbsp;&nbsp;&nbsp;
+        <apex:dataTable value="{!accounts}" var="x" frame="border" cellpadding="10px" rules="rows" columnsWidth="250,250,250" styleClass="head">
+        	<apex:column value="{!x.name}" headerValue="Name"/>
+            <apex:column value="{!x.rating}" headerValue="Rating"/>
+            <apex:column value="{!x.industry}" headerValue="Industry"/>
+        </apex:dataTable>
+    </apex:form>
+</apex:page>

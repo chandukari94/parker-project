@@ -1,0 +1,133 @@
+<apex:page >
+    <apex:sectionHeader title="Costomer" subtitle="New Customer" help="/apex/page_3/"/>
+    <apex:form >
+        <apex:pageBlock title="Customer Details" helpTitle="need help??" helpUrl="/apex/page_3/">
+             <apex:pageBlockButtons >
+                	<apex:commandButton value="Save"/>
+                    <apex:commandButton value="Save&New"/>
+                    <apex:commandButton value="Cancel"/>
+                </apex:pageBlockButtons>
+        	<apex:pageBlockSection title="Profile" collapsible="false	">
+               
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="First Name" />
+                    <apex:inputText />
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="First Name" />
+                    <apex:inputText />
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="email" />
+                    <apex:inputText />
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="phone" />
+                    <apex:inputText />
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Age" />
+                    <apex:inputText />
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Gender:" />
+                    <apex:selectRadio >
+                        <apex:selectoption itemlabel="Male" itemvalue="male" />
+                        <apex:selectoption itemlabel="Female" itemvalue="female" />
+                    </apex:selectRadio>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Address" collapsible="false">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="State" />
+                    <apex:selectList size="1">
+                        <apex:selectoption itemlabel="-None-" itemvalue="east" />
+                        <apex:selectoption itemlabel="Kerala"  itemvalue="east"/>
+                        <apex:selectoption itemlabel="Tamilanaadu" itemvalue="east" />
+                        <apex:selectoption itemlabel="karnataka" itemvalue="east" />
+                        <apex:selectoption itemlabel="Telangana"  itemvalue="east" />
+                        <apex:selectoption itemlabel="Andrapradesh" itemvalue="east" />
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="District" />
+                    <apex:selectList size="1">
+                        <apex:selectoption itemlabel="-None-" itemvalue="east" />
+                        <apex:selectoption itemlabel="East Godavari"  itemvalue="east"/>
+                        <apex:selectoption itemlabel="west Godavari" itemvalue="east" />
+                        <apex:selectoption itemlabel="Visakapattanam" itemvalue="east" />
+                        <apex:selectoption itemlabel="Vizayanagaram"  itemvalue="east" />
+                        <apex:selectoption itemlabel="Srikakulam" itemvalue="east" />
+                        <apex:selectoption itemlabel="Krishna" itemvalue="east" />
+                        <apex:selectoption itemlabel="Guntur" itemvalue="east" />
+                        <apex:selectoption itemlabel="Prakasam" itemvalue="east" />
+                        <apex:selectoption itemlabel="Nellore" itemvalue="east" />
+                        <apex:selectoption itemlabel="Ananthapuram" itemvalue="east" />
+                        <apex:selectoption itemlabel="Kurnool" itemvalue="east" />
+                        <apex:selectoption itemlabel="Kadapa" itemvalue="east" />
+                        <apex:selectoption itemlabel="Chittoor" itemvalue="east" />
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Mandal" />
+                    <apex:inputText />
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Village" />
+                    <apex:inputText />
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Street" />
+                    <apex:inputText />
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Pincode" />
+                    <apex:inputText />
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:pageblocksection title="laon Details" collapsible="false"	>
+            	
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Amount" />
+                    <apex:inputText />
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Bank" />
+                    <apex:inputText />
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Branch Name" />
+                    <apex:inputText />
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Interest" />
+                    <apex:inputText />
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Open Date" />
+                    <apex:inputText />
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Closed Date" />
+                    <apex:inputText />
+                </apex:pageBlockSectionItem>
+            </apex:pageblocksection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

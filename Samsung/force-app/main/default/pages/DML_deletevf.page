@@ -1,0 +1,14 @@
+<apex:page controller="DML_delete">
+    <apex:form id="one">
+    	<apex:selectList size="1" value="{!selected}" >
+            <apex:selectOptions value="{!options}" />
+            <apex:actionSupport event="onchange" action="{!fetchData}"  reRender="one" />
+        </apex:selectList>
+        <br/><br/>
+        <apex:dataTable value="{!accounts}" var="a" cellpadding="10" rules="rows" frame="border">
+            <apex:column value="{!a.name}" headerValue="Name" />
+            <apex:column value="{!a.phone}" headerValue="Phone" />
+            <apex:column value="{!a.industry}" headervalue="Industry" />
+        </apex:dataTable>
+    </apex:form>
+</apex:page>

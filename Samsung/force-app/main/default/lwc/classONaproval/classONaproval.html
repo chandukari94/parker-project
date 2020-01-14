@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Create Approval Record" icon-name="standard:account">
+        <div style="margin-left: 6%" if:true={error}>
+            <lightning-badge label={error} style="color: red;"></lightning-badge>
+        </div>
+        <template if:true={clsRecord}>
+            <div class="slds-m-around--xx-large">
+                <div class="container-fluid">
+                    <div class="form-group">
+                        <lightning-input label="Enter Class Name" name="clsName" required="required" type="text" value={clsRecord.Name} onchange={handleNameChange}></lightning-input>
+                    </div>
+                   
+                </div>
+                    <br/>
+                <lightning-button label="Submit" onclick={handleSave} variant="brand"></lightning-button>
+            </div>
+            <br/>
+            <br/>
+           
+        </template>
+    </lightning-card>
+</template>

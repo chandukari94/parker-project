@@ -1,0 +1,59 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c/accountCreatLWC": [
+                "accountCreatLWC/accountCreatLWC.js"
+            ],
+            "c/approvalOnAccount": [
+                "approvalOnAccount/approvalOnAccount.js"
+            ],
+            "c/bike": [
+                "bike/bike.js"
+            ],
+            "c/bikecard": [
+                "bikecard/bikecard.js"
+            ],
+            "c/classONaproval": [
+                "classONaproval/classONaproval.js"
+            ],
+            "c/classdatatable": [
+                "classdatatable/classdatatable.js"
+            ],
+            "c/createOPP": [
+                "createOPP/createOPP.js"
+            ],
+            "c/createRecordInLWC": [
+                "createRecordInLWC/createRecordInLWC.js"
+            ],
+            "c/opportunity_datatable": [
+                "opportunity_datatable/opportunity_datatable.js"
+            ],
+            "c/qICKApprovalLWC": [
+                "qICKApprovalLWC/qICKApprovalLWC.js"
+            ],
+            "c/sampleOne": [
+                "sampleOne/sampleOne.js"
+            ],
+            "c/web_Two": [
+                "web_Two/web_Two.js"
+            ],
+            "c/web_one": [
+                "web_one/web_one.js"
+            ],
+            "c/HelloWorldLightningWebComponent": [
+                "HelloWorldLightningWebComponent/HelloWorldLightningWebComponent.js"
+            ]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    }
+}

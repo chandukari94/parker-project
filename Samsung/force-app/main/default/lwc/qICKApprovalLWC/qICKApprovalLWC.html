@@ -1,0 +1,9 @@
+<template>
+    <lightning-card>
+        
+<!--Submit for approval Button-->
+<template if:true={accRecord}>
+        <lightning-button value="data" variant="brand" label="Submit For Approval" title="Primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+    </template>
+    </lightning-card>
+</template>

@@ -1,0 +1,22 @@
+<apex:page controller="mapexample" >
+    <apex:form >
+    	<apex:pageBlock id="x" title="chandu">
+        	<apex:pageBlockSection >
+            	<apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Account Name:" />
+                    <apex:selectList size="1" value="{!selected}">
+                        <apex:selectOptions value="{!A_names}"/>
+                        <apex:actionSupport event="onchange" action="{!getnames}" reRender="x"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Contact Firstname:" />
+                    <apex:selectList size="1">
+                        <apex:selectOptions value="{!C_names}"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
